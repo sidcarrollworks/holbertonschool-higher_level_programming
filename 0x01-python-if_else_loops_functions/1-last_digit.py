@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-tmp = ""
+tmp = number
 if number < 0:
     tmp = -number
 lastDigit = tmp % 10
