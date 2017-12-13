@@ -4,4 +4,5 @@ def no_c(my_string):
     for x in my_string:
         if x != 'c' and x != 'C':
             my_list.append(x)
-    return ''.join(my_list)
+    new_string = ''.join(my_list)
+    return new_string
