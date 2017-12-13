@@ -8,9 +8,9 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *finder;
-	unsigned int i;
+	int i;
 	int *number;
-	unsigned int length;
+	int length;
 
 	finder = *head;
 
@@ -23,10 +23,10 @@ int is_palindrome(listint_t **head)
 
 	finder = *head;
 	i = 0;
-	while (finder && i <= length)
+	while (finder)
 	{
-		number[i] = finder->n;
-		i++, finder = finder->next;
+		number[i++] = finder->n;
+		finder = finder->next;
 	}
 	
 	i = 0, length--;
