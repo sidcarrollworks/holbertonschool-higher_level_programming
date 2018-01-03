@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 class Square:
-
+	'''
+		define square
+	'''
     def __init__(self, size=0):
+		'''Initialization of instance attributes
+            Args:
+            size (int): Zero or positve number.
+        '''
         if not isinstance(size, int):
             raise TypeError("size must be a integer")
         if size < 0:
@@ -9,6 +15,9 @@ class Square:
         self.__size = size
 
     def area(self):
+		'''Calculates the area
+            Return: The current square area.
+        '''
         return self.__size * self.__size
 
     @property
@@ -17,6 +26,10 @@ class Square:
 
     @size.setter
     def size(self, value):
+		'''Updating the private attributes
+            Args:
+            value (int): Zero or positve number.
+        '''
         if not isinstance(value, int):
             raise TypeError("size must be a integer")
         if value < 0:
