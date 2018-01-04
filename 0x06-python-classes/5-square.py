@@ -9,7 +9,7 @@ class Square:
             size (int): Zero or positve number.
         '''
         if not isinstance(size, int):
-            raise TypeError("size must be a integer")
+            raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
@@ -44,7 +44,7 @@ class Square:
             value (int): Zero or positve number.
         '''
         if not isinstance(value, int):
-            raise TypeError("size must be a integer")
+            raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
