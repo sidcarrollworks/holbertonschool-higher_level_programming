@@ -8,7 +8,7 @@ class Square:
     """A square that has stuff
 
     Attributes:
-        size (int): The length of the side
+        None
     """
     def __init__(self, size=0):
         """Initialization of the square
