@@ -12,7 +12,7 @@ class Square:
             print('')
         else:
             for space_c in range(self.__position[1]):
-                print(' ')
+                print('')
 
             for col in range(self.__size):
                 for space_r in range(self.__position[0]):
