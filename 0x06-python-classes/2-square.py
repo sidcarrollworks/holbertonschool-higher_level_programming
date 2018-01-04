@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    This module defines a square
+This module defines a square
 """
 
 
