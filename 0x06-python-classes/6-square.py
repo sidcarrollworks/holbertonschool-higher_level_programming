@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, size=0, position=(0, 0)):
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = size
         self.__position = position
 
@@ -8,11 +12,18 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        for col in range(self.__size):
-            print(' ' * self.__position[0], end='')
-            for row in range(self.__size):
-                print('#', end='')
+        if self.__size == 0:
             print('')
+        else:
+            for space_c in range(self.__position[1]):
+                print(' ')
+
+            for col in range(self.__size):
+                for space_r in range(self.__position[0]):
+                    print(' ', end='')
+                for row in range(self.__size):
+                    print('#', end='')
+                print()
 
     @property
     def size(self):
