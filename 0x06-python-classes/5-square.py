@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 class Square:
     '''
-		Define square
-	'''
+        Define square
+    '''
     def __init__(self, size=0):
-		'''Initialization of instance attributes
+        '''Initialization of instance attributes
             Args:
             size (int): Zero or positve number.
         '''
@@ -15,13 +15,13 @@ class Square:
         self.__size = size
 
     def area(self):
-		'''Calculates the area
+	'''Calculates the area
             Return: The current square area.
         '''
         return self.__size * self.__size
 
     def my_print(self):
-		'''
+	'''
             prints in stdout the square with the character # or a new line
             is size is zero.
         '''
@@ -39,7 +39,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-		'''Updating the private attributes
+	'''Updating the private attributes
             Args:
             value (int): Zero or positve number.
         '''
