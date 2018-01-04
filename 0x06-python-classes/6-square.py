@@ -8,14 +8,11 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        if self.__size == 0:
+        for col in range(self.__size):
+            print(' ' * self.__position[0], end='')
+            for row in range(self.__size):
+                print('#', end='')
             print('')
-        else:
-            for col in range(self.__size):
-                print(' ' * self.__position[0], end='')
-                for row in range(self.__size):
-                    print('#', end='')
-                print('')
 
     @property
     def size(self):
