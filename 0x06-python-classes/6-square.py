@@ -1,21 +1,6 @@
 #!/usr/bin/python3
-"""
-    This is the square
-"""
-
-
 class Square:
-    """A Square is a shape that has 4 sides of equal length
-
-    Attributes:
-        size (int): The length of each edge of a Square
-        position (tuple): The coordinates of a Square in 2D space
-    """
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
         self.__position = position
 
