@@ -9,6 +9,7 @@ class Square:
 
     Attributes:
         None
+
     """
     def __init__(self, size=0):
         """Initialization of the square
