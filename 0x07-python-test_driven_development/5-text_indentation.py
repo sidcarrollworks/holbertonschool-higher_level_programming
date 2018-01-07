@@ -13,7 +13,13 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError('text must be a string')
 
+    tests = ['.', ':', '?']
+    string = ''
     for x in text:
-        print('{}'.format(x), end='')
-        if x == '.' or x == ':' or x == '?':
-            print('')
+        string += x
+        if x in tests:
+            string += '\n'
+            print(string.strip(' '))
+            string = ''
+    if x not in tests:
+        print(string)
