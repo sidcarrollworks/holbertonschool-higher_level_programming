@@ -1,0 +1,25 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``text_indentation`` from the ``5-text_indentation`` module:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+"""Start Tests"""
+
+	>>> text = 13
+	>>> text_indentation(text)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text = 'yo, dude? I like cheesecake.'
+	>>> text_indentation(text)
+	yo, dude?
+	<BLANKLINE>
+	I like cheesecake.
+	<BLANKLINE>
