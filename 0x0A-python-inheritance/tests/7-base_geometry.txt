@@ -1,0 +1,46 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("str", 1)
+
+>>> bg.integer_validator("fda", "asdf")
+Traceback (most recent call last):
+    ...
+TypeError: str must be an integer
+
+
+>>> bg.integer_validator("str", -77)
+Traceback (most recent call last):
+    ...
+ValueError: str must be greater than 0
+
+>>> bg.integer_validator("string", 9.66)
+Traceback (most recent call last):
+    ...
+TypeError: string must be an integer
+
+>>> bg.integer_validator("str", 0)
+Traceback (most recent call last):
+    ...
+ValueError: str must be greater than 0
+
+>>> bg.integer_validator("str",)
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() takes exactly 3 arguments (2 given)
+
+>>> bg.integer_validator("", True)
+Traceback (most recent call last):
+    ...
+TypeError:  must be an integer
+
+>>> bg.integer_validator(,1)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax
+
+>>> bg.integer_validator("", 1)
+
+>>> bg.integer_validator("string", True)
+Traceback (most recent call last):
+    ...
+TypeError: string must be an integer
