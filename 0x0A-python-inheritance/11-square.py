@@ -22,17 +22,15 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        return '[Rectangle] {:d}/{:d}'.format(self.__width, self.__width)
+        return '[{}] {:d}/{:d}'.format(type(self).__name__, 
+									   self.__width, self.__width)
 
 class Square(Rectangle):
 
     def __init__(self, size):
         self.integer_validator("size", size)
-        super().init(size, size)
+		super().__init__(size, size)
         self.__size = size
 
     def area(self):
         return  self.__size ** 2
-
-    def __str__(self):
-        return "[Square] {}/{}".format(self.__size, self.__size)
