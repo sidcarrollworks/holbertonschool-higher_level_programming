@@ -6,12 +6,12 @@ from sys import argv
 filename = 'add_item.json'
 
 try:
-	file_data = load_from_json_file(filename)
+    file_data = load_from_json_file(filename)
 except FileNotFoundError:
-	file_data = []
-	save_to_json_file(file_data, filename)
+    file_data = []
+    save_to_json_file(file_data, filename)
 
 for x in range(1, len(argv)):
-	file_data.append(argv[x])
+    file_data.append(argv[x])
 
 save_to_json_file(file_data, filename)

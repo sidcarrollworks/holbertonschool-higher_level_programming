@@ -2,4 +2,4 @@
 import json
 
 def class_to_json(obj):
-	return getattr(obj, '__dict__')
+    return getattr(obj, '__dict__')
