@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
-	if n <= 0:
-		return []
+    if n <= 0:
+        return []
     arr = [[1]]
     for i in range(n - 1):
         arr.append(
