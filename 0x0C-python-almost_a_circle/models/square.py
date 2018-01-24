@@ -26,6 +26,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         words = ["id", "size", "x", "y"]
         if kwargs is not None:
+            i = 0
             for key, value in kwargs.items():
                 setattr(self, key, value)
         for x, arg in enumerate(args):
