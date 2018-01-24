@@ -26,6 +26,9 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        '''
+            updates rectangle
+        '''
         words = ["id", "size", "x", "y"]
         if kwargs is not None:
             i = 0
@@ -35,6 +38,9 @@ class Square(Rectangle):
             setattr(self, words[x], arg)
 
     def to_dictionary(self):
+        '''
+            turns to dict
+        '''
         return {
             'id': self.id,
             'size': self.size,
