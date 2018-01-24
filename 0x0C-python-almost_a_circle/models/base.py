@@ -18,7 +18,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dumbo = cls(2, 4)
+        dumbo = cls(1, 1)
         dumbo.update(**dictionary)
         return dumbo
 
@@ -48,7 +48,7 @@ class Base:
         except IOError:
             return []
 
-        return [cls.create(**i) for i in focontents]
+        return [cls.create(**i) for i in fcontents]
 
     @staticmethod
     def from_json_string(json_string):
