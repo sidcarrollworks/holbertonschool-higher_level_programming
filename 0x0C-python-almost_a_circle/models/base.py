@@ -1,10 +1,8 @@
 #!/usr/bin/python3
+'''base'''
 import json
 
 
-'''
-    Base class
-'''
 class Base:
     '''
         Base class
