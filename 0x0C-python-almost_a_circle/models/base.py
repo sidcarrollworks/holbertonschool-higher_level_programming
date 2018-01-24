@@ -44,15 +44,11 @@ class Base:
         filename = cls.__name__ + '.json'
         try:
             with open(filename, 'r', encoding='UTF8') as f:
-                fcontents = from_json_string(f.read())
+                fcontents = cls.from_json_string(f.read())
         except FileNotFoundError:
             return []
-        instances = []
 
-        for instance in fcontents:
-            linst = cls.create(**instance)
-            instances.append(linst)
-        return instances
+        return [cls.create(**i) for i in focontents
 
     @staticmethod
     def from_json_string(json_string):
