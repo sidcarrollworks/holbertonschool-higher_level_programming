@@ -10,9 +10,6 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        '''
-            Init function
-        '''
         if id is not None:
             self.id = id
         else:
@@ -21,18 +18,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        '''
-            create class method
-        '''
         dumbo = cls(2,4)
         dumbo.update(**dictionary)
         return dumbo
 
     @classmethod
     def save_to_file(cls, list_objs):
-        '''
-            save to file
-        '''
         filename = cls.__name__ + '.json'
         try:
             with open(filename, 'r') as f:
@@ -50,9 +41,6 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        '''
-            Lod form file
-        '''
         filename = cls.__name__ + '.json'
         try:
             with open(filename, encoding='UTF8') as f:
@@ -69,18 +57,12 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        '''
-            from json string
-        '''
         if json_string is None:
             return []
         return json.loads(json_string)
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        '''
-            to json string method
-        '''
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
