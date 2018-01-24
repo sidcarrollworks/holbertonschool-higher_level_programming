@@ -1,13 +1,12 @@
 #!/usr/bin/python3
+"""Rectangle"""
 from models.base import Base
-'''
-    Rectangle class
-'''
+
 
 class Rectangle(Base):
-
-
-    """Magic Funtions"""
+    """
+        Rectangle class
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -16,10 +15,9 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x,\
-                                     self.y, self.width, self.height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y,
+                                                       self.width, self.height)
 
-    """Setters and getters"""
     @property
     def width(self):
         return self.__width
@@ -68,7 +66,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    """other methods"""
     def area(self):
         return self.__width * self.__height
 
@@ -93,9 +90,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         return {
-                'id': self.id,
-                'width': self.width,
-                'height': self.height,
-                'x': self.x,
-                'y': self.y
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
             }

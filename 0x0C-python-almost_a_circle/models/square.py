@@ -1,18 +1,20 @@
 #!/usr/bin/python3
+'''square module'''
 from models.rectangle import Rectangle
-'''
-    square module
-'''
+
 
 class Square(Rectangle):
-
+    '''
+        Square class
+    '''
 
     def __init__(self, size, x=0, y=0, id=None):
 
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y, self.size)
+        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x,
+                                                 self.y, self.size)
 
     @property
     def size(self):
@@ -34,8 +36,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         return {
-                'id': self.id,
-                'size': self.size,
-                'x': self.x,
-                'y': self.y
-                }
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+            }

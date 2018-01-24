@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""base"""
+"""base.py"""
 import json
 
 
@@ -52,7 +52,6 @@ class Base:
         for instance in fcontents:
             linst = cls.create(**instance)
             instances.append(linst)
-
         return instances
 
     @staticmethod
