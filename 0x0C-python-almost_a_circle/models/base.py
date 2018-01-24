@@ -6,15 +6,15 @@ import json
     Base class
 '''
 class Base:
-'''
-    Base class
-'''
+    '''
+        Base class
+    '''
     __nb_objects = 0
 
     def __init__(self, id=None):
-    '''
-        Init function
-    '''
+        '''
+            Init function
+        '''
         if id is not None:
             self.id = id
         else:
@@ -22,19 +22,19 @@ class Base:
             self.id = Base.__nb_objects
 
     @classmethod
-    '''
-        create class method
-    '''
     def create(cls, **dictionary):
+        '''
+            create class method
+        '''
         dumbo = cls(2,4)
         dumbo.update(**dictionary)
         return dumbo
 
     @classmethod
-    '''
-        save tto file class method
-    '''
     def save_to_file(cls, list_objs):
+        '''
+            save to file
+        '''
         filename = cls.__name__ + '.json'
         try:
             with open(filename, 'r') as f:
@@ -51,10 +51,10 @@ class Base:
             json.dump(fcontents, f)
 
     @classmethod
-    '''
-        Load method
-    '''
     def load_from_file(cls):
+        '''
+            Lod form file
+        '''
         filename = cls.__name__ + '.json'
         try:
             with open(filename, encoding='UTF8') as f:
@@ -70,19 +70,19 @@ class Base:
         return instances
 
     @staticmethod
-    '''
-        from json method
-    '''
     def from_json_string(json_string):
+        '''
+            from json string
+        '''
         if json_string is None:
             return []
         return json.loads(json_string)
 
     @staticmethod
-    '''
-        to json string method
-    '''
     def to_json_string(list_dictionaries):
+        '''
+            to json string method
+        '''
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)

@@ -112,13 +112,3 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.x, 3)
         self.assertEqual(s1.y, 3)
         self.assertEqual(s1.id, 3)
-
-    def test_update_2many_args(self):
-        s1 = Square(2, 2, 2, 2)
-
-        s1.update(3, 3, 3, 3, 4, 3, 5, 7)
-
-        self.assertEqual(s1.size, 3)
-        self.assertEqual(s1.x, 3)
-        self.assertEqual(s1.y, 3)
-        self.assertEqual(s1.id, 3)
