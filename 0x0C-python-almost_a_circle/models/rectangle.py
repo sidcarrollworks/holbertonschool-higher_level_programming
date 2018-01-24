@@ -67,9 +67,15 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        '''
+            area
+        '''
         return self.__width * self.__height
 
     def display(self):
+        '''
+            display
+        '''
         rect = ""
         for x in range(self.__y):
             rect += '\n'
@@ -81,6 +87,9 @@ class Rectangle(Base):
         print(rect[:-1])
 
     def update(self, *args, **kwargs):
+        '''
+            update
+        '''
         words = ["id", "width", "height", "x", "y"]
         if kwargs is not None:
             for key, value in kwargs.items():
@@ -89,6 +98,9 @@ class Rectangle(Base):
             setattr(self, words[x], arg)
 
     def to_dictionary(self):
+        '''
+            to dictionary
+        '''
         return {
             'id': self.id,
             'width': self.width,

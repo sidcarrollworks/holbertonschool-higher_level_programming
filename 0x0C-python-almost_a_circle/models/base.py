@@ -44,8 +44,8 @@ class Base:
         filename = cls.__name__ + '.json'
         try:
             with open(filename, encoding='UTF8') as f:
-                fcontents = json.load(f)
-        except:
+                fcontents = from_json_string(f.read())
+        except IOError:
             return []
         instances = []
 
