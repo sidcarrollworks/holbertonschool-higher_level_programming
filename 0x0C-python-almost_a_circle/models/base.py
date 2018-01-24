@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-'''base'''
+"""base"""
 import json
 
 
 class Base:
-    '''
+
+    """
         Base class
-    '''
+    """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -18,7 +20,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dumbo = cls(2,4)
+        dumbo = cls(2, 4)
         dumbo.update(**dictionary)
         return dumbo
 
