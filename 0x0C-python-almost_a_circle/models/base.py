@@ -18,7 +18,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dumbo = cls(1, 1)
+        if "size" in dictionary:
+            dumbo = cls(1)
+        else:
+            dumbo = cls(1, 1)
         dumbo.update(**dictionary)
         return dumbo
 
