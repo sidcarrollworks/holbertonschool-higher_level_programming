@@ -45,7 +45,7 @@ class Base:
         try:
             with open(filename, 'r', encoding='UTF8') as f:
                 fcontents = cls.from_json_string(f.read())
-        except FileNotFoundError:
+        except IOError:
             return []
 
         return [cls.create(**i) for i in focontents]
