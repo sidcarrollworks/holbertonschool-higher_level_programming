@@ -48,7 +48,7 @@ class Base:
         except FileNotFoundError:
             return []
 
-        return [cls.create(**i) for i in focontents
+        return [cls.create(**i) for i in focontents]
 
     @staticmethod
     def from_json_string(json_string):
