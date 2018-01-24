@@ -43,9 +43,9 @@ class Base:
     def load_from_file(cls):
         filename = cls.__name__ + '.json'
         try:
-            with open(filename, encoding='UTF8') as f:
+            with open(filename, 'r', encoding='UTF8') as f:
                 fcontents = from_json_string(f.read())
-        except IOError:
+        except FileNotFoundError:
             return []
         instances = []
 
