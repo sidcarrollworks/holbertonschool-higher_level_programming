@@ -1,3 +1,3 @@
 -- lists all records of the table
-select score, name from second_table where name is not null
-order by desc;
+SELECT score, name FROM second_table WHERE name IS NOT NULL
+ORDER BY DESC;

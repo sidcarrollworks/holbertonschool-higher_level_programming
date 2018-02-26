@@ -1,3 +1,3 @@
 -- lists number of records with the same score
-select score, count(score) as number from second_table
-group by score desc;
+SELECT score, COUNT(score) AS number FROM second_table
+GROUP BY score DESC;
