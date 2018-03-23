@@ -15,7 +15,8 @@ def select_states(username, password, dbname, search):
                 WHERE `name`=(%s) ORDER BY id ASC", (search,))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if (row[1] == search):
+            print(row)
     cur.close()
     db.close()
 
