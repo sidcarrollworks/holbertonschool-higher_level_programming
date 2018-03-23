@@ -11,8 +11,9 @@ def select_states(username, password, dbname, search):
                          db=dbname,
                          port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states`\
-                WHERE `name`=(%s) ORDER BY id ASC", (search,))
+    query = "SELECT * FROM `states`\
+                WHERE `name`='{}' ORDER BY id ASC".format(search)
+    cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
         if (row[1] == search):
