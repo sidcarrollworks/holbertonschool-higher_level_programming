@@ -15,7 +15,8 @@ def select_states(username, password, dbname):
                 WHERE `name` REGEXP '^N' ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if ('N' in row[1]):
+            print(row)
     cur.close()
     db.close()
 
