@@ -2,8 +2,9 @@
 import sys
 import MySQLdb
 
-def select_states(username, password, dbname, search):
 
+def select_states(username, password, dbname, search):
+    '''select states by searched term'''
     db = MySQLdb.connect(host="localhost",
                          user=username,
                          passwd=password,

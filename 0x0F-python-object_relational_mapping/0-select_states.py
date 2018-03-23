@@ -2,8 +2,9 @@
 import sys
 import MySQLdb
 
-def select_states(username, password, dbname):
 
+def select_states(username, password, dbname):
+    '''Selecting states'''
     db = MySQLdb.connect(host="localhost",
                          user=username,
                          passwd=password,
