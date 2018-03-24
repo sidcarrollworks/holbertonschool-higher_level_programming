@@ -2,7 +2,7 @@
 """mode for city"""
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import State Base
+from model_state import State, Base
 
 
 class City(Base):
