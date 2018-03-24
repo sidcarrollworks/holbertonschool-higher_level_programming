@@ -19,7 +19,7 @@ if __name__ == "__main__":
     s = Session()
 
     new_state = State(name="Louisiana")
-    insert = sesh.add(new_state)
+    insert = s.add(new_state)
     s.commit()
 
     print(s.query(State).filter(State.name == "Louisiana")[0].id)
