@@ -10,7 +10,7 @@ def find_peak(list_of_integers):
 
     if len(a) == 0:
         return 0
-    elif len (1) == 1:
+    elif len(a) == 1:
         return a[x]
 
     for x in range(0, len(a)):
