@@ -1,3 +1,3 @@
 #!/bin/bash
 # get the body
-curl -L "$1"
+curl -sL "$1"
