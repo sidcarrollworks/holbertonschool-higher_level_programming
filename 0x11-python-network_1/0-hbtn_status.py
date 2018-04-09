@@ -3,8 +3,6 @@
 
 if __name__ == "__main__":
     from urllib.request import urlopen
-
-
     with urlopen('https://intranet.hbtn.io/status') as r:
         html = r.read()
         print("Body response:")
