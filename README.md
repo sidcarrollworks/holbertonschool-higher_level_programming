@@ -1,12 +1,5 @@
 # High Level programming with Python
 
-## Table of Contents
-* [About](#about)
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Author](#author)
-
 ## About
 This repository contains Python projects while learning the language for the first time. Projects range from basic data types, data structures, to object-oriented programming, usage of modeules, API scripting, etc. Many projects include the main.py files used to test the code.
 
